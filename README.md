@@ -1,1 +1,0 @@
-# ifrs17-guide
