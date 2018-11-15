@@ -27,7 +27,7 @@
 				<section>The Friendly Guide to IFRS 17</section>
         <section>
           <p>
-            You can always refer to the
+            You can always refer to
             <a target="_blank" href="https://www.ifrs.org/issued-standards/list-of-standards/ifrs-17-insurance-contracts/">IFRS 17 Insurance Contracts</a>
             if you like reading boring paragraphs.
           </p>
@@ -40,8 +40,20 @@
         <section>
           Let's get to the point, with numbers.
         </section>
+        <section data-markdown>
+          <script type="text/template">
+You are probably familiar with how the reserves control the profit of an insurance contract.
+
+| Year | | 1 | 2 | 3 | 4
+| --- | ---| ---:|---:|---:|---:
+| Revenue | Premium | 300 | 0 | 0 | 0
+| Expense | Claims | 20 | 40 | 50 | 70
+| | Change in Reserves | 200 | -60 | -60 | -80
+| Total Profit | | 80 | 20 | 10 | 10
+          </script>
+        </section>
         <section>
-          You are probably familiar with how the reserves control the profit of an insurance contract:
+          The profit under IFRS 17 will be mainly driven by CSM (Contractual Service Margin).
         </section>
 			</div>
 		</div>
@@ -54,6 +66,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
