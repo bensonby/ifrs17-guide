@@ -12,6 +12,37 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <style type="text/css">
+      .replace-div {
+        position:absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .replace-div-wide {
+        position:absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0;
+        left: 0;
+        right: -70%;
+        bottom: 0;
+      }
+      .replace-container {
+        position: relative;
+      }
+      .span-inline-block {
+        display: inline-block;
+      }
+
+      .csm {
+        color: plum;
+      }
+    </style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -38,22 +69,48 @@
           </blockquote>
         </section>
         <section>
+          <h2>Concept 1: CSM</h2>
+          <p class="csm">CSM: Contractual Service Margin</p>
           Let's get to the point, with numbers.
         </section>
         <section data-markdown>
           <script type="text/template">
-You are probably familiar with how the reserves control the profit of an insurance contract.
+            <div class="replace-container">
+              <p class="fragment fade-out" data-fragment-index="1">In the old days under GAAP/IFRS4, the P&L is like this, with the reserves controlling the profit.</p>
+              <p class="fragment fade-in-then-out replace-div" data-fragment-index="1">Under IFRS 17, imagine profit = <span class="csm">change in CSM</span>.</p>
+              <p class="fragment fade-in-then-out replace-div" data-fragment-index="2">The CSM is a liability, with beginning balance = 120.</p>
+              <p class="fragment fade-in-then-out replace-div" data-fragment-index="3">120 = the total profit (premium - claims).</p>
+              <p class="fragment fade-in replace-div" data-fragment-index="4">The reserves do not contribute to the total profit.</p>
+            </div>
 
-| Year | | 1 | 2 | 3 | 4
-| --- | ---| ---:|---:|---:|---:
-| Revenue | Premium | 300 | 0 | 0 | 0
-| Expense | Claims | 20 | 40 | 50 | 70
-| | Change in Reserves | 200 | -60 | -60 | -80
-| Total Profit | | 80 | 20 | 10 | 10
+              | Year | | 1 | 2 | 3
+              | --- | ---| ---:|---:|---:
+              | Revenue | <span class="fragment highlight-blue" data-fragment-index="3">Premium</span> | <span class="fragment highlight-blue" data-fragment-index="3">200</span> | <span class="fragment highlight-blue" data-fragment-index="3">0</span> | <span class="fragment highlight-blue" data-fragment-index="3">0</span>
+              | Expense | <span class="fragment highlight-blue" data-fragment-index="3">Claims</span> | <span class="fragment highlight-blue" data-fragment-index="3">10</span> | <span class="fragment highlight-blue" data-fragment-index="3">20</span> | <span class="fragment highlight-blue" data-fragment-index="3">50</span>
+              | | <span class="fragment strike semi-fade-out" data-fragment-index="4">Change in Reserves</span> | <span class="fragment strike semi-fade-out" data-fragment-index="4">100</span> | <span class="fragment strike semi-fade-out" data-fragment-index="4">-40</span> | <span class="fragment strike semi-fade-out" data-fragment-index="4">-60</span>
+              | <div class="replace-container"><span class="fragment fade-out span-inline-block" data-fragment-index="1">Total Profit</span> <span class="fragment fade-in replace-div-wide span-inline-block csm" data-fragment-index="1">Change in CSM</span> | | 90 | 20 | 10
+
           </script>
         </section>
         <section>
-          The profit under IFRS 17 will be mainly driven by CSM (Contractual Service Margin).
+          <h2>Recap on CSM</h2>
+          <p>Profits are driven by the amortization of the <span class="csm">CSM (Contractual Service Margin).</span></p>
+          <p><span class="csm">CSM</span> reduces from 120 to 0 in 3 years to release profit.</p>
+          <p>Ready to go deeper on <span class="csm">CSM</span>?</p>
+        </section>
+        <section>
+          <ol>
+            <li>How to determine the CSM release pattern?</li>
+            <li>How to calculate the initial CSM balance?</li>
+            <li>How to handle the time value of money?</li>
+          </ol>
+        </section>
+        <section>
+          <p>Q1: </p>
+          <ol>
+            <li>P&L statement / B/S example</li>
+            <li>Experience variance</li>
+          </ol>
         </section>
 			</div>
 		</div>
